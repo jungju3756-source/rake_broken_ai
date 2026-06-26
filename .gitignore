@@ -1,0 +1,39 @@
+# ===== 대용량/불필요 파일 제외 =====
+# 동영상 (원본/생성/결과)
+*.mp4
+*.avi
+*.mov
+
+# 압축파일
+*.zip
+
+# 이미지(스크린샷/생성물) — 데이터셋 내부 이미지는 별도 강제포함
+*.png
+*.jpg
+*.jpeg
+
+# 베이스/사전학습 가중치 (다운로드 가능)
+capstone/yolov8n.pt
+capstone/yolov8n-seg.pt
+capstone/yolo26n.pt
+
+# 추출 프레임 / 결과 / 데모
+_frames/
+capstone/frames/
+capstone/demo_out/
+capstone/runs/
+
+# 이전(1차) 데이터셋 — v2로 대체됨
+rake-fault-detection.v2i.yolov8/
+
+# 파이썬 캐시
+__pycache__/
+*.pyc
+
+# 에디터/OS
+.claude/
+.DS_Store
+Thumbs.db
+
+# ===== 데이터셋 라벨 이미지는 강제 포함 (위 *.jpg 규칙 무시) =====
+!rake-fault-v2.v1i.yolov8/**/*.jpg

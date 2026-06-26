@@ -1,0 +1,19 @@
+# 레이크/제진기 상태 탐지 데이터셋 (yolov8n detection 용)
+# 폴더 구조:
+#   datasets/rake/images/{train,val}/*.jpg
+#   datasets/rake/labels/{train,val}/*.txt   (YOLO bbox 포맷)
+path: datasets/rake
+train: images/train
+val: images/val
+
+# 접근법 1) 상태(state) 탐지: 정상 vs 고장 을 객체로 라벨
+names:
+  0: rake_normal      # 레이크 정상 (제 위치/정상 동작)
+  1: rake_fault       # 레이크 고장 (걸림/이탈/갈퀴 휨/막힘)
+  2: screen           # 스크린(제진망) - 기준 위치 참조용(선택)
+
+# 접근법 2) 부품 탐지 후 규칙으로 고장 판정하려면:
+# names:
+#   0: rake
+#   1: screen
+#   2: debris_pile     # 스크린에 쌓여 안 걷히는 협잡물 더미

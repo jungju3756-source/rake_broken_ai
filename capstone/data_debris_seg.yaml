@@ -1,0 +1,21 @@
+# 부유물 세그멘테이션 데이터셋 (yolov8n-seg 용)
+# 폴더 구조:
+#   datasets/debris/images/{train,val}/*.jpg
+#   datasets/debris/labels/{train,val}/*.txt   (YOLO seg polygon 포맷)
+path: datasets/debris
+train: images/train
+val: images/val
+
+# --- 옵션 A: 상세 다중클래스 (정밀 분류가 목표일 때) ---
+names:
+  0: plastic_bag      # 비닐봉지
+  1: pet_bottle       # 페트병/플라스틱병
+  2: can              # 캔
+  3: branch           # 나뭇가지
+  4: leaf             # 낙엽
+  5: styrofoam        # 스티로폼
+  6: etc_trash        # 기타 부유 쓰레기
+
+# --- 옵션 B: 단일클래스 (부유물 '면적/커버리지' 측정이 목표라면 이게 더 쉽고 강건함) ---
+# names:
+#   0: debris

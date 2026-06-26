@@ -1,0 +1,14 @@
+path: C:/Users/aim88/Desktop/26_4/방학_캡스톤_디자인/rake-fault-v2.v1i.yolov8
+train: train/images
+val: valid/images
+test: test/images
+
+nc: 2
+names: ['rake', 'rake_broken']
+
+roboflow:
+  workspace: jungjus-workspace
+  project: rake-fault-v2
+  version: 1
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/jungjus-workspace/rake-fault-v2/dataset/1
